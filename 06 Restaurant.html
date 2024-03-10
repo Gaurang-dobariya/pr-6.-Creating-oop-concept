@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        class Restaurant {
+
+            constructor(item) {
+
+                this.item = []
+
+            }
+
+            Menu() {
+
+                this.item = [
+                    {
+                        name: "Pizza",
+                        price: 200,
+                        rating: 4.5
+                    },
+                    {
+                        name: "Burger",
+                        price: 100,
+                        rating: 4
+                    },
+                    {
+                        name: "Pasta",
+                        price: 150,
+                        rating: 3.9
+                    },
+                    {
+                        name: "Sandwich",
+                        price: 120,
+                        rating: 4.2
+                    },
+                    {
+                        name: "French Fries",
+                        price: 90,
+                        rating: 5
+                    },
+
+                ]
+
+                console.log("Total Items In Menu : ", this.item.length);
+                console.log(this.item);
+
+                let sum = 0
+
+                for (let i = 0; i < this.item.length; i++) {
+
+                    sum = sum + this.item[i].rating
+
+                }
+
+                let avg = sum / this.item.length
+                console.log("Average Rating Of Menu :", avg);
+
+            }
+
+            AddItem() {
+
+                console.log("After Adding New Items");
+                this.item.push(
+                    {
+                        name: "Franky",
+                        price: 60,
+                        rating: 4.1
+                    },
+                    {
+                        name: "manchurian",
+                        price: 130,
+                        rating: 4.3
+                    },
+                 
+                )
+                console.log("Total Items In Menu : ", this.item.length);
+                console.log(this.item);
+
+                let sum = 0
+
+                for (let i = 0; i < this.item.length; i++) {
+
+                    sum = sum + this.item[i].rating
+
+                }
+
+                let avg = sum / this.item.length
+                console.log("Average Rating Of Menu :", avg);
+
+            }
+
+            RemoveItems(){
+
+                console.log("After Removing New Items");
+                this.item.pop()
+
+                console.log("Total Items In Menu : ", this.item.length);
+                console.log(this.item);
+
+                let sum = 0
+
+                for (let i = 0; i < this.item.length; i++) {
+
+                    sum = sum + this.item[i].rating
+
+                }
+
+                let avg = sum / this.item.length
+                console.log("Average Rating Of Menu :", avg);
+
+            }
+
+        }
+
+        let c1 = new Restaurant()
+        c1.Menu()
+        c1.AddItem()
+        c1.RemoveItems()
+
+
+    </script>
+
+</body>
+
+</html>

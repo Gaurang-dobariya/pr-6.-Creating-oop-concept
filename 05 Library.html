@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        class Library{
+
+            constructor(arr){
+                this.arr = arr
+            }
+
+            CollectionOfBooks(){
+
+                this.arr = ["Gujrati","Hindi","English","Physics","Chemistry"]
+                console.log(this.arr);
+
+            }
+
+            AddBook(){
+
+                console.log("After Adding Book");
+                console.log("Collection Of Books : ",this.arr.push("Maths","Computer"));
+                console.log(this.arr);
+
+            }
+
+            RemoveBook(){
+
+                console.log("After Removing Book");
+                this.arr.splice(1,1)
+                console.log("Collection Of Books : ",this.arr.length);
+                console.log(this.arr);
+
+            }
+
+        }
+
+        let b1 = new Library()
+        b1.CollectionOfBooks()
+        b1.AddBook()
+        b1.RemoveBook()
+
+
+
+
+    </script>
+
+</body>
+</html>

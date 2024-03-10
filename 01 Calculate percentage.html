@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculate Percentage</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+
+        class Student {
+
+            constructor(Physics, Chemistry, Biology, Mathematics, Computer) {
+
+                this.Physics = Physics;
+                this.Chemistry = Chemistry;
+                this.Biology = Biology;
+                this.Mathematics = Mathematics;
+                this.Computer = Computer;
+
+            }
+            printMarks() {
+                console.log(`physics marks = ${this.Physics}
+chemistry mark = ${this.Chemistry}
+biology marks = ${this.Biology}
+mathamatics marks = ${this.Mathematics}
+computer marks = ${this.Computer}`);
+            }
+
+            CalculatePercentage() {
+
+                this.average = (this.Physics + this.Chemistry + this.Biology + this.Mathematics + this.Computer) / 5
+                console.log("Percentage = ", this.average);
+
+                if (this.average >= 90 && this.average <= 100) {
+
+                    console.log("Grade : A");
+
+                }
+                else if (this.average >= 80 && this.average <= 90) {
+
+                    console.log("Grade : B");
+
+                }
+                else if (this.average >= 70 && this.average <= 80) {
+
+                    console.log("Grade : C");
+
+                }
+                else if (this.average >= 60 && this.average <= 70) {
+
+                    console.log("Grade : D");
+
+                }
+                else if (this.average >= 50 && this.average <= 60) {
+
+                    console.log("Grade : E");
+
+                }
+                else if (this.average >= 40 && this.average <= 50) {
+
+                    console.log("Grade : F");
+
+                }
+                else {
+
+                    console.log("You Are Fail");
+
+                }
+
+            }
+
+        }
+
+        let s1 = new Student(90, 100, 80, 85, 90)
+        s1.printMarks()
+        s1.CalculatePercentage()
+
+        let s2 = new Student(95, 90, 100, 92, 88)
+        s2.printMarks()
+        s2.CalculatePercentage()
+
+        let s3 = new Student(25, 37, 47, 38, 40)
+        s3.printMarks()
+        s3.CalculatePercentage()
+
+
+    </script>
+
+
+</body>
+
+</html>
